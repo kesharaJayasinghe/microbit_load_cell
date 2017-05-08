@@ -1,0 +1,15 @@
+{
+    "name": "Untitled",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "neopixel": "github:microsoft/pxt-neopixel#v0.3.6",
+        "microbit_test": "github:jonathanc56/microbit_test#9e76a2931a14b089bb2891395536a0e7ec3f5fcf"
+    },
+    "description": "",
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ]
+}

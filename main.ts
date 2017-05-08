@@ -17,7 +17,22 @@ export function allLED(): void
     # # # # #
     # # # # #
     `)
+ }
 
+ //% block
+export function fadeLED(duration: number): void
+{
+    
+led.plotAll()
+for (let i = 0; i <= 5 - 1; i++) 
+{
+    led.setBrightness(0)
+    led.fadeIn(duration)
+    basic.pause(500)
+    led.fadeOut(duration)
+}
+
+    
  }
 
 }

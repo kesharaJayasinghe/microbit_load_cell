@@ -2,7 +2,7 @@
  * Provides access to basic micro:bit functionality.
  */
 
-//% color=#F0F8FF weight=100 icon="\uf1ec" block="Jonathan"
+//% color=#000000 weight=100 icon="\uf1ec" block="Jonathan"
 namespace jonathan 
 {
 

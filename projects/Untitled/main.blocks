@@ -1,26 +1,16 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="pxt-on-start" id="NrWqMS![Y1O;NuZQRUy[" x="23" y="54">
+  <block type="pxt-on-start" id="L)d?!u^a~#Om^`%FOh|j" x="-7" y="57">
     <statement name="HANDLER">
-      <block type="jonathan_allLED" id="BTWl1l|%*9u@P9PiKNc(">
-        <value name="v">
-          <shadow type="math_number" id="/|*:]$|4Eu}Jm?A}ic2h">
-            <field name="NUM">0</field>
-          </shadow>
-        </value>
-        <value name="interval">
-          <shadow type="math_number" id="~l|l2$gA[GMO6)%lIUp]">
-            <field name="NUM">0</field>
-          </shadow>
-        </value>
+      <block type="jonathan_allLED" id="TG(Q@!{tD;CTY^!}_qzl">
         <next>
-          <block type="device_pause" id="]HZ:!4X?1nUAp(!3)PsK">
+          <block type="device_pause" id="%q81qnJIqapPL7vU}SG*">
             <value name="pause">
-              <shadow type="math_number" id=";p%CiXvD(;uz?;UAwI;F">
+              <shadow type="math_number" id="j2BN=4ooc@$^?9Pr;2V3">
                 <field name="NUM">1000</field>
               </shadow>
             </value>
             <next>
-              <block type="device_show_leds" id="xHb0{vkT}2|LELl]V}Dp">
+              <block type="device_show_leds" id="j/b%H31R6;io%K~F,G%n">
                 <field name="LED00">FALSE</field>
                 <field name="LED10">FALSE</field>
                 <field name="LED20">FALSE</field>
@@ -47,9 +37,9 @@
                 <field name="LED34">FALSE</field>
                 <field name="LED44">FALSE</field>
                 <next>
-                  <block type="device_pause" id="ft*./O_3t|axyK3LQNw.">
+                  <block type="device_pause" id="-=oGw5OK*9ZhuYVV*l|,">
                     <value name="pause">
-                      <shadow type="math_number" id="TtOHRx.snsST8mGta{/(">
+                      <shadow type="math_number" id="IpBUaQuE3#d2L@u;:|mv">
                         <field name="NUM">1000</field>
                       </shadow>
                     </value>

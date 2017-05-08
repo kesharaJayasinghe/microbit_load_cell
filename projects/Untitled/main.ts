@@ -1,4 +1,4 @@
-jonathan.allLED(0, 0)
+jonathan.allLED()
 basic.pause(1000)
 basic.showLeds(`
     . . . . .

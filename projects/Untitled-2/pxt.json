@@ -3,7 +3,7 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microbit_test": "github:jonathanc56/microbit_test#f1110d62c3e12a0e1b83b79f5003f477fe6042d4"
+        "microbit_test": "github:jonathanc56/microbit_test#15bb7e61c5d7c43c7b5902835ed2181d52d3bc59"
     },
     "description": "",
     "files": [

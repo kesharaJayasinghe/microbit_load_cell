@@ -2,7 +2,8 @@
     "name": "Untitled",
     "dependencies": {
         "core": "*",
-        "radio": "*"
+        "radio": "*",
+        "microbit_test": "github:jonathanc56/microbit_test#1360e479485e7d34acdd30dd464100c3c39cca40"
     },
     "description": "",
     "files": [

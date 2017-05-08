@@ -3,7 +3,8 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microbit_test": "github:jonathanc56/microbit_test#d107d86a6f99913dc01a191d7b1a49547c06424f"
+        "microbit_test": "github:jonathanc56/microbit_test#faa2cceba8bada280b8650ec43b98052a5489148",
+        "neopixel": "github:microsoft/pxt-neopixel#v0.3.6"
     },
     "description": "",
     "files": [

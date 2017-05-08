@@ -1,32 +1,64 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="pxt-on-start" id="j}_.)Ly{`[^0k-E*Rx`c" x="180" y="99">
+  <block type="pxt-on-start" id="NrWqMS![Y1O;NuZQRUy[" x="23" y="54">
     <statement name="HANDLER">
-      <block type="device_show_leds" id="u/8K~*,$S([mH]-N8R$L">
-        <field name="LED00">TRUE</field>
-        <field name="LED10">TRUE</field>
-        <field name="LED20">TRUE</field>
-        <field name="LED30">TRUE</field>
-        <field name="LED40">TRUE</field>
-        <field name="LED01">TRUE</field>
-        <field name="LED11">TRUE</field>
-        <field name="LED21">TRUE</field>
-        <field name="LED31">TRUE</field>
-        <field name="LED41">TRUE</field>
-        <field name="LED02">TRUE</field>
-        <field name="LED12">TRUE</field>
-        <field name="LED22">TRUE</field>
-        <field name="LED32">TRUE</field>
-        <field name="LED42">TRUE</field>
-        <field name="LED03">TRUE</field>
-        <field name="LED13">TRUE</field>
-        <field name="LED23">TRUE</field>
-        <field name="LED33">TRUE</field>
-        <field name="LED43">TRUE</field>
-        <field name="LED04">TRUE</field>
-        <field name="LED14">TRUE</field>
-        <field name="LED24">TRUE</field>
-        <field name="LED34">TRUE</field>
-        <field name="LED44">TRUE</field>
+      <block type="jonathan_allLED" id="BTWl1l|%*9u@P9PiKNc(">
+        <value name="v">
+          <shadow type="math_number" id="/|*:]$|4Eu}Jm?A}ic2h">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="interval">
+          <shadow type="math_number" id="~l|l2$gA[GMO6)%lIUp]">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="device_pause" id="]HZ:!4X?1nUAp(!3)PsK">
+            <value name="pause">
+              <shadow type="math_number" id=";p%CiXvD(;uz?;UAwI;F">
+                <field name="NUM">1000</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="device_show_leds" id="xHb0{vkT}2|LELl]V}Dp">
+                <field name="LED00">FALSE</field>
+                <field name="LED10">FALSE</field>
+                <field name="LED20">FALSE</field>
+                <field name="LED30">FALSE</field>
+                <field name="LED40">FALSE</field>
+                <field name="LED01">FALSE</field>
+                <field name="LED11">FALSE</field>
+                <field name="LED21">FALSE</field>
+                <field name="LED31">FALSE</field>
+                <field name="LED41">FALSE</field>
+                <field name="LED02">FALSE</field>
+                <field name="LED12">FALSE</field>
+                <field name="LED22">FALSE</field>
+                <field name="LED32">FALSE</field>
+                <field name="LED42">FALSE</field>
+                <field name="LED03">FALSE</field>
+                <field name="LED13">FALSE</field>
+                <field name="LED23">FALSE</field>
+                <field name="LED33">FALSE</field>
+                <field name="LED43">FALSE</field>
+                <field name="LED04">FALSE</field>
+                <field name="LED14">FALSE</field>
+                <field name="LED24">FALSE</field>
+                <field name="LED34">FALSE</field>
+                <field name="LED44">FALSE</field>
+                <next>
+                  <block type="device_pause" id="ft*./O_3t|axyK3LQNw.">
+                    <value name="pause">
+                      <shadow type="math_number" id="TtOHRx.snsST8mGta{/(">
+                        <field name="NUM">1000</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
       </block>
     </statement>
   </block>

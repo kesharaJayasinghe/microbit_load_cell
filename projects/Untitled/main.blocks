@@ -1,1 +1,33 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="pxt-on-start" id="j}_.)Ly{`[^0k-E*Rx`c" x="180" y="99">
+    <statement name="HANDLER">
+      <block type="device_show_leds" id="u/8K~*,$S([mH]-N8R$L">
+        <field name="LED00">TRUE</field>
+        <field name="LED10">TRUE</field>
+        <field name="LED20">TRUE</field>
+        <field name="LED30">TRUE</field>
+        <field name="LED40">TRUE</field>
+        <field name="LED01">TRUE</field>
+        <field name="LED11">TRUE</field>
+        <field name="LED21">TRUE</field>
+        <field name="LED31">TRUE</field>
+        <field name="LED41">TRUE</field>
+        <field name="LED02">TRUE</field>
+        <field name="LED12">TRUE</field>
+        <field name="LED22">TRUE</field>
+        <field name="LED32">TRUE</field>
+        <field name="LED42">TRUE</field>
+        <field name="LED03">TRUE</field>
+        <field name="LED13">TRUE</field>
+        <field name="LED23">TRUE</field>
+        <field name="LED33">TRUE</field>
+        <field name="LED43">TRUE</field>
+        <field name="LED04">TRUE</field>
+        <field name="LED14">TRUE</field>
+        <field name="LED24">TRUE</field>
+        <field name="LED34">TRUE</field>
+        <field name="LED44">TRUE</field>
+      </block>
+    </statement>
+  </block>
+</xml>

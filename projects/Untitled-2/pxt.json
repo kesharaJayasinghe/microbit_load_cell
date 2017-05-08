@@ -1,0 +1,14 @@
+{
+    "name": "Untitled",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microbit_test": "github:jonathanc56/microbit_test#f1110d62c3e12a0e1b83b79f5003f477fe6042d4"
+    },
+    "description": "",
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ]
+}

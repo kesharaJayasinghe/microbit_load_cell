@@ -19,6 +19,7 @@ export function readTemp(): void
     `)
 }
 
+//% block    
  export function setTempThreshold(): void
 {
     basic.showLeds

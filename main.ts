@@ -20,7 +20,7 @@ export function readTemp(): void
 }
 
 //% block    
- export function setTempThreshold(duration: number)): void
+ export function setTempThreshold(duration: number): void
 {
     basic.showLeds
     (`

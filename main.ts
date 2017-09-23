@@ -34,6 +34,7 @@ export function readTemp(): void
 
 
  //% block
+ /*   
 export function fadeLED(duration: number): void
 {
     
@@ -50,3 +51,4 @@ for (let i = 0; i <= 5 - 1; i++)
  }
 
 }
+*/

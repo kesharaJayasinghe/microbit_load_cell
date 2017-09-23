@@ -2,12 +2,24 @@
  * Provides access to basic micro:bit functionality.
  */
 
-//% color=#000000 weight=100 icon="\uf08a" block="Jonathan"
+//% color=#000000 weight=100 icon="\uf013" block="Orel - Temp Sensor"
 namespace jonathan 
 {
 
 //% block
-export function allLED(): void
+export function readTemp(): void
+{
+    basic.showLeds
+    (`
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    `)
+}
+
+ export function setTempThreshold(): void
 {
     basic.showLeds
     (`
@@ -18,6 +30,8 @@ export function allLED(): void
     # # # # #
     `)
  }
+
+
 
  //% block
 export function fadeLED(duration: number): void

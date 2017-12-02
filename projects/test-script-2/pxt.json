@@ -1,0 +1,14 @@
+{
+    "name": "test_script",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microbit_test": "github:jonathanc56/microbit_test#48913afb918bb1363050050c70c3ce87ed3da6b7"
+    },
+    "description": "",
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ]
+}

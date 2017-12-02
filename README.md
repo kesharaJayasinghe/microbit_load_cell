@@ -1,4 +1,6 @@
-# microbit_test
+# microbit_load_cell
+
+Version 1.1
 
 N/A
 

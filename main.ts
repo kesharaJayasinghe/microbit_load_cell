@@ -20,21 +20,17 @@ namespace Load_Cell {
 
 
     //% block    
-    export function readValue(): number {
+    export function ReadRawValue(): number {
 
-        serial.writeString("one")
         let j = 0
         let count = 0
         pins.digitalWritePin(DigitalPin.P0, 0)
-
         count = 0
-        serial.writeString("two")
 
         while (pins.digitalReadPin(DigitalPin.P1) == 1) {
 
         }
 
-        serial.writeString("three")
         count = 0
 
         while (j < 24) {
@@ -49,16 +45,11 @@ namespace Load_Cell {
             }
             j = j + 1
         }
-        serial.writeString("four")
+
         pins.digitalWritePin(DigitalPin.P0, 1)
         control.waitMicros(5)
         count = count ^ 0x800000
         pins.digitalWritePin(DigitalPin.P0, 0)
-        serial.writeString("Weight Value:")
-        serial.writeNumber(count)
-        serial.writeLine("")
-        serial.writeLine("")
-        serial.writeString("five")
         return count;
 
     }

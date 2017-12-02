@@ -53,6 +53,7 @@ namespace Load_Cell {
             pins.digitalWritePin(DigitalPin.P0, 1)
             control.waitMicros(5)
             rawValue = count ^ 0x800000
+            rawValue = rawValue / 100
             pins.digitalWritePin(DigitalPin.P0, 0)
 
             totalValue = totalValue + rawValue;

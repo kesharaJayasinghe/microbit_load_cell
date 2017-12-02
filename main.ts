@@ -26,6 +26,7 @@ namespace Load_Cell {
         let j = 0
         let count = 0
         pins.digitalWritePin(DigitalPin.P0, 0)
+
         count = 0
         serial.writeString("two")
 
@@ -35,6 +36,7 @@ namespace Load_Cell {
 
         serial.writeString("three")
         count = 0
+
         while (j < 24) {
             pins.digitalWritePin(DigitalPin.P0, 1)
             control.waitMicros(5)
@@ -45,6 +47,7 @@ namespace Load_Cell {
             if (pins.digitalReadPin(DigitalPin.P1) == 1) {
                 count = count + 1
             }
+            j = j + 1
         }
         serial.writeString("four")
         pins.digitalWritePin(DigitalPin.P0, 1)

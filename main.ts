@@ -97,9 +97,16 @@ namespace Load_Cell {
         value = rawValue / 100
         output = (value - calibration) * (5000000 / 10700)
         weight = output / 10000
+        
+        serial.writeLine("Calibration: ")
+        serial.writeNumber(calibration)
+        serial.writeLine("")
+        serial.writeLine("Value: ")
+        serial.writeNumber(value - calibration)
+        serial.writeLine("")
 
 
-        return output;
+        return weight;
 
     }
 

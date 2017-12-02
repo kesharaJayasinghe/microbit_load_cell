@@ -17,7 +17,50 @@ namespace Load_Cell {
     `)
     }
 
+//% block    
+    export function GetCalibrationValue(): void {
 
+        let j = 0
+        let count = 0
+        let rawValue = 0
+        let totalValue = 0
+        let avgValue = 0
+
+        for (let i = 0; i < 4; i++) {
+
+            pins.digitalWritePin(DigitalPin.P0, 0)
+            count = 0
+
+            while (pins.digitalReadPin(DigitalPin.P1) == 1) {
+
+            }
+
+            count = 0
+
+            while (j < 24) {
+                pins.digitalWritePin(DigitalPin.P0, 1)
+                control.waitMicros(5)
+                pins.digitalWritePin(DigitalPin.P0, 0)
+                control.waitMicros(5)
+                basic.pause(1)
+                count = count << 1;
+                if (pins.digitalReadPin(DigitalPin.P1) == 1) {
+                    count = count + 1
+                }
+                j = j + 1
+            }
+
+            pins.digitalWritePin(DigitalPin.P0, 1)
+            control.waitMicros(5)
+            rawValue = count ^ 0x800000
+            pins.digitalWritePin(DigitalPin.P0, 0)
+
+            totalValue = totalValue + rawValue;
+        }    
+        
+        avgValue = totalValue / 5;
+        basic.showNumber(avgValue)
+    }
 
     //% block    
     export function ReadRawValue(): number {
@@ -58,7 +101,7 @@ namespace Load_Cell {
 
 
     //% block  
-    export function ReadValueinGrams(calibration: number): number {
+    export function ReadValueInGramsWith(calibration: number): number {
 
         let j = 0
         let count = 0

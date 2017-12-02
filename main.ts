@@ -24,6 +24,8 @@ namespace Load_Cell {
 
         let j = 0
         let count = 0
+        let rawValue = 0
+
         pins.digitalWritePin(DigitalPin.P0, 0)
         count = 0
 
@@ -48,9 +50,57 @@ namespace Load_Cell {
 
         pins.digitalWritePin(DigitalPin.P0, 1)
         control.waitMicros(5)
-        count = count ^ 0x800000
+        rawValue = count ^ 0x800000
         pins.digitalWritePin(DigitalPin.P0, 0)
-        return count;
+        return rawValue;
 
     }
+
+
+
+         export function ReadValueinGrams(calibration: number): number {
+
+        let j = 0
+        let count = 0
+        let rawValue = 0
+        let value = 0     
+        let output = 0
+        let weight = 0     
+        
+        pins.digitalWritePin(DigitalPin.P0, 0)
+        count = 0
+
+        while (pins.digitalReadPin(DigitalPin.P1) == 1) {
+
+        }
+
+        count = 0
+
+        while (j < 24) {
+            pins.digitalWritePin(DigitalPin.P0, 1)
+            control.waitMicros(5)
+            pins.digitalWritePin(DigitalPin.P0, 0)
+            control.waitMicros(5)
+            basic.pause(1)
+            count = count << 1;
+            if (pins.digitalReadPin(DigitalPin.P1) == 1) {
+                count = count + 1
+            }
+            j = j + 1
+        }
+
+        pins.digitalWritePin(DigitalPin.P0, 1)
+        control.waitMicros(5)
+        rawValue = count ^ 0x800000
+        pins.digitalWritePin(DigitalPin.P0, 0)
+        
+        value = rawValue / 1000
+        output = (value-calibration)*(5000000/10700)
+        weight = output/10000   
+             
+
+        return output;
+
+    }
+
 }

@@ -2,7 +2,7 @@
  * Allows interface with the HX711 Load Cell Board
  */
 
-//% color=#000000 weight=100 icon="\uf013" block="Orel - Load Cell"
+//% color=#000000 weight=100 icon="\uf24e" block="Orel - Load Cell"
 namespace Load_Cell {
 
     //% block

@@ -94,7 +94,7 @@ namespace Load_Cell {
         rawValue = count ^ 0x800000
         pins.digitalWritePin(DigitalPin.P0, 0)
 
-        value = rawValue / 1000
+        value = rawValue / 100
         output = (value - calibration) * (5000000 / 10700)
         weight = output / 10000
 

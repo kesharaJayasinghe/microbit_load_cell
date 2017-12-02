@@ -20,7 +20,7 @@ namespace Load_Cell {
 
 
     //% block    
-    export function readValue(value: number): void {
+    export function readValue(): number {
 
         let j = 0
         let count = 0
@@ -52,6 +52,8 @@ namespace Load_Cell {
         serial.writeNumber(count)
         serial.writeLine("")
         serial.writeLine("")
+        
+        return count;
 
     }
 }

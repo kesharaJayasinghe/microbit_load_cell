@@ -46,6 +46,7 @@ namespace Load_Cell {
                 count = count + 1
             }
         }
+        serial.writeString("four")
         pins.digitalWritePin(DigitalPin.P0, 1)
         control.waitMicros(5)
         count = count ^ 0x800000
@@ -54,7 +55,7 @@ namespace Load_Cell {
         serial.writeNumber(count)
         serial.writeLine("")
         serial.writeLine("")
-
+        serial.writeString("five")
         return count;
 
     }

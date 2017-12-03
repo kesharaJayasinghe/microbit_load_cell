@@ -165,8 +165,11 @@ namespace Load_Cell {
         serial.writeLine("Value: ")
         serial.writeNumber(value)
         serial.writeLine("")
-        serial.writeLine("Value: ")
+        serial.writeLine("Value-Calibration: ")
         serial.writeNumber(value - calibration)
+        serial.writeLine("")
+        serial.writeLine("Weight Output: ")
+        serial.writeNumber(weight)
         serial.writeLine("")
 
 

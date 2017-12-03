@@ -2,13 +2,13 @@
  * Allows interface with the HX711 Load Cell Board
  */
 
- enum maxWeight{
-	 //% block="500g"
-     fivehundredgrams,
+enum maxWeight {
+    //% block="500g"
+    fivehundredgrams,
 
-     //% block="5kg"
-     fivekilograms
- }
+    //% block="5kg"
+    fivekilograms
+}
 
 
 //% color=#000000 weight=100 icon="\uf24e" block="Orel - Load Cell"
@@ -26,7 +26,7 @@ namespace Load_Cell {
     `)
     }
 
-//% block    
+    //% block    
     export function GetCalibrationValue(): void {
 
         let j = 0
@@ -66,8 +66,8 @@ namespace Load_Cell {
             pins.digitalWritePin(DigitalPin.P0, 0)
 
             totalValue = totalValue + rawValue;
-        }    
-        
+        }
+
         avgValue = totalValue / 5;
         basic.showNumber(avgValue)
     }
@@ -112,7 +112,7 @@ namespace Load_Cell {
 
     //% block  
     //% blockId=load_cell block="readvalueingrams calibration %calibration|maximumload %maximumload"
-    export function ReadValueInGramsWith(calibration: number, maximumload: maxWeight): number {
+    export function ReadValueInGramsWith(calibration: number, maximumLoad: maxWeight): number {
 
         let j = 0
         let count = 0
@@ -120,6 +120,13 @@ namespace Load_Cell {
         let value = 0
         let output = 0
         let weight = 0
+        let maximumLoadValue = 0;
+
+        switch (maximumLoad) {
+            case maxWeight.fivehundredgrams: maximumLoadValue =5000000;
+            case maxWeight.fivehundredgrams: maximumLoadValue =50000000;
+            default: maximumLoadValue =50000000;
+        }
 
         pins.digitalWritePin(DigitalPin.P0, 0)
         count = 0
@@ -149,9 +156,9 @@ namespace Load_Cell {
         pins.digitalWritePin(DigitalPin.P0, 0)
 
         value = rawValue / 100
-        output = (value - calibration) * (5000000 / 10700)
+        output = (value - calibration) * (maximumLoadValue / 10700)
         weight = output / 10000
-        
+
         serial.writeLine("Calibration: ")
         serial.writeNumber(calibration)
         serial.writeLine("")

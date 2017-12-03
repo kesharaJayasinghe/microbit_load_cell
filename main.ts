@@ -64,7 +64,7 @@ namespace Load_Cell {
                     count = count + 1
                 }
 
-                if (j = 23) {
+                if (j == 23) {
                     pins.digitalWritePin(DigitalPin.P0, 1)
                     control.waitMicros(5)
                     pins.digitalWritePin(DigitalPin.P0, 0)
@@ -170,7 +170,7 @@ namespace Load_Cell {
                 count = count + 1
             }
 
-            if (j = 23) {
+            if (j == 23) {
                 pins.digitalWritePin(DigitalPin.P0, 1)
                 control.waitMicros(5)
                 pins.digitalWritePin(DigitalPin.P0, 0)

@@ -35,6 +35,9 @@ namespace Load_Cell {
         let totalValue = 0
         let avgValue = 0
 
+        pins.digitalWritePin(DigitalPin.P0, 0)
+        basic.pause(100)
+
         for (let i = 0; i < 5; i++) {
 
             pins.digitalWritePin(DigitalPin.P0, 0)

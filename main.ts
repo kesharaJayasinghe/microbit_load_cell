@@ -2,6 +2,15 @@
  * Allows interface with the HX711 Load Cell Board
  */
 
+ enum maxWeight{
+	 //% block="500g"
+     fivehundredgrams,
+
+     //% block="5kg"
+     fivekilograms
+ }
+
+
 //% color=#000000 weight=100 icon="\uf24e" block="Orel - Load Cell"
 namespace Load_Cell {
 
@@ -103,7 +112,7 @@ namespace Load_Cell {
 
     //% block  
     //% blockId=load_cell block="readvalueingrams calibration %calibration|maximumload %maximumload"
-    export function ReadValueInGramsWith(calibration: number, maximumload: number): number {
+    export function ReadValueInGramsWith(calibration: number, maximumload: maxWeight): number {
 
         let j = 0
         let count = 0

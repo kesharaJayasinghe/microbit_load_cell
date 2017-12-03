@@ -169,13 +169,21 @@ namespace Load_Cell {
             if (pins.digitalReadPin(DigitalPin.P1) == 1) {
                 count = count + 1
             }
+
+            if (j = 23) {
+                pins.digitalWritePin(DigitalPin.P0, 1)
+                control.waitMicros(5)
+                pins.digitalWritePin(DigitalPin.P0, 0)
+                control.waitMicros(5)
+            }
+
             j = j + 1
         }
 
-        pins.digitalWritePin(DigitalPin.P0, 1)
-        control.waitMicros(3)
+        //pins.digitalWritePin(DigitalPin.P0, 1)
+        //control.waitMicros(3)
         rawValue = count ^ 0x800000
-        pins.digitalWritePin(DigitalPin.P0, 0)
+        //pins.digitalWritePin(DigitalPin.P0, 0)
 
         value = rawValue / 100
         output = (value - calibration) * (maximumLoadValue / 10700)

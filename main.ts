@@ -65,6 +65,10 @@ namespace Load_Cell {
             rawValue = rawValue / 100
             pins.digitalWritePin(DigitalPin.P0, 0)
 
+            serial.writeLine("Raw Value: ")
+            serial.writeNumber(rawValue)
+            serial.writeLine(" ")
+
             totalValue = totalValue + rawValue;
         }
 
@@ -123,9 +127,9 @@ namespace Load_Cell {
         let maximumLoadValue = 0;
 
         switch (maximumLoad) {
-            case maxWeight.fivehundredgrams: maximumLoadValue =5000000;
-            case maxWeight.fivehundredgrams: maximumLoadValue =50000000;
-            default: maximumLoadValue =50000000;
+            case maxWeight.fivehundredgrams: maximumLoadValue = 5000000;
+            case maxWeight.fivehundredgrams: maximumLoadValue = 50000000;
+            default: maximumLoadValue = 50000000;
         }
 
         pins.digitalWritePin(DigitalPin.P0, 0)

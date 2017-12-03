@@ -43,12 +43,12 @@ namespace Load_Cell {
 
         for (let i = 0; i < 6; i++) {
 
-            //pins.digitalWritePin(DigitalPin.P0, 0)
-            //count = 0
+            pins.digitalWritePin(DigitalPin.P0, 0)
+            count = 0
 
-            //while (pins.digitalReadPin(DigitalPin.P1) == 1) {
+            while (pins.digitalReadPin(DigitalPin.P1) == 1) {
 
-            //}
+            }
 
             count = 0
             rawValue = 0

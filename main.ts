@@ -41,7 +41,7 @@ namespace Load_Cell {
 
         }
 
-        for (let i = 0; i < 9; i++) {
+        for (let i = 0; i < 10; i++) {
 
             pins.digitalWritePin(DigitalPin.P0, 0)
             count = 0
@@ -85,8 +85,8 @@ namespace Load_Cell {
             serial.writeNumber(rawValue)
             serial.writeLine(" ")
 
-                totalValue = totalValue + rawValue;
-            
+            totalValue = totalValue + rawValue;
+
         }
 
         avgValue = totalValue / 10;

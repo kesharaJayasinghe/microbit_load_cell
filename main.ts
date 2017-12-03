@@ -45,6 +45,7 @@ namespace Load_Cell {
 
             pins.digitalWritePin(DigitalPin.P0, 0)
             count = 0
+            j = 0
 
             while (pins.digitalReadPin(DigitalPin.P1) == 1) {
 
@@ -58,18 +59,25 @@ namespace Load_Cell {
                 control.waitMicros(5)
                 pins.digitalWritePin(DigitalPin.P0, 0)
                 control.waitMicros(5)
-                basic.pause(1)
                 count = count << 1;
                 if (pins.digitalReadPin(DigitalPin.P1) == 1) {
                     count = count + 1
                 }
+
+                if (j = 23) {
+                    pins.digitalWritePin(DigitalPin.P0, 1)
+                    control.waitMicros(5)
+                    pins.digitalWritePin(DigitalPin.P0, 0)
+                    control.waitMicros(5)
+                }
                 j = j + 1
+
             }
 
-            pins.digitalWritePin(DigitalPin.P0, 1)
-            control.waitMicros(3)
+            // pins.digitalWritePin(DigitalPin.P0, 1)
+            // control.waitMicros(3)
             rawValue = count ^ 0x800000
-            pins.digitalWritePin(DigitalPin.P0, 0)
+            //pins.digitalWritePin(DigitalPin.P0, 0)
 
             rawValue = rawValue / 100
 

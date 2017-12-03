@@ -163,6 +163,9 @@ namespace Load_Cell {
         serial.writeNumber(calibration)
         serial.writeLine("")
         serial.writeLine("Value: ")
+        serial.writeNumber(value)
+        serial.writeLine("")
+        serial.writeLine("Value: ")
         serial.writeNumber(value - calibration)
         serial.writeLine("")
 

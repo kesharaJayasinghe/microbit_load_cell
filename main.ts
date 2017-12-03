@@ -102,7 +102,7 @@ namespace Load_Cell {
 
 
     //% block  
-    export function ReadValueInGramsWith(calibration: number): number {
+    export function ReadValueInGramsWith(calibration: number, maximumload: number): number {
 
         let j = 0
         let count = 0

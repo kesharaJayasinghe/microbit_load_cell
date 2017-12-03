@@ -51,6 +51,7 @@ namespace Load_Cell {
             //}
 
             count = 0
+            rawValue = 0
 
             while (j < 24) {
                 pins.digitalWritePin(DigitalPin.P0, 1)
@@ -69,8 +70,8 @@ namespace Load_Cell {
             control.waitMicros(3)
             rawValue = count ^ 0x800000
             pins.digitalWritePin(DigitalPin.P0, 0)
-            rawValue = rawValue / 100
 
+            rawValue = rawValue / 100
 
             serial.writeLine("Raw Value: ")
             serial.writeNumber(rawValue)

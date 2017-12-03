@@ -40,9 +40,8 @@ namespace Load_Cell {
         while (pins.digitalReadPin(DigitalPin.P1) == 1) {
 
         }
-        //basic.pause(1000)
 
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 6; i++) {
 
             //pins.digitalWritePin(DigitalPin.P0, 0)
             //count = 0
@@ -77,7 +76,9 @@ namespace Load_Cell {
             serial.writeNumber(rawValue)
             serial.writeLine(" ")
 
-            totalValue = totalValue + rawValue;
+            if (i > 0) {
+                totalValue = totalValue + rawValue;
+            }
         }
 
         avgValue = totalValue / 5;

@@ -102,6 +102,7 @@ namespace Load_Cell {
 
 
     //% block  
+    //% blockId=load_cell block="readvalueingrams calibration %calibration|maximumload %maximumload"
     export function ReadValueInGramsWith(calibration: number, maximumload: number): number {
 
         let j = 0

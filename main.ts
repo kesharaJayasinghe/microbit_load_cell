@@ -207,16 +207,16 @@ namespace Load_Cell {
 
         if (weight < 0) weight = 0;
 
-
+        /*
         switch (maximumLoad) {
             case maxWeight.fivehundredgrams: {
                 if (weight > 500) { weight = 500};
             }
             case maxWeight.fivekilograms:{
-                if (weight > 500) { weight = 5000};
+                if (weight > 5000) { weight = 5000};
         }    
     }
-
+*/
 
     return weight;
 

@@ -87,6 +87,7 @@ namespace Load_Cell {
         basic.showNumber(avgValue)
     }
 
+    
     //% block  
     //% blockId=load_cell block="initialize load cell with %calibration| and maximum load %maximumload"
     export function InitializeLoadCell(calibration: number, maximumLoad: maxWeight): void {
@@ -147,7 +148,6 @@ namespace Load_Cell {
 
 
     //% block  
-    //% blockId=load_cell block="read value in grams 
     export function ReadValueInGrams(): number {
 
         let j = 0

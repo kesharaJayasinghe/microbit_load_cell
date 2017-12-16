@@ -238,9 +238,8 @@ namespace Load_Cell {
 
     }
 
-    //% block  
-    //% blockId=load_cell block="tare and read value in grams with maximum load %maximumload"    
-    export function TareAndReadValueInGramsWith(maximumLoad: maxWeight): number {
+    //% block      
+    export function TareWith(maximumLoad: maxWeight): number {
 
         let j = 0
         let count = 0

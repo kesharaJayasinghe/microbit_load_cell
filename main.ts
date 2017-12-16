@@ -105,11 +105,11 @@ namespace Load_Cell {
 
     }
 
-    
+
     //% block  
     export function tare(): void {
         usedCalibration = value;
-    }    
+    }
 
 
     //% block    
@@ -193,7 +193,6 @@ namespace Load_Cell {
             j = j + 1
         }
 
-
         rawValue = count ^ 0x800000
 
         value = rawValue / 100
@@ -208,6 +207,9 @@ namespace Load_Cell {
         serial.writeLine("")
         serial.writeLine("Input Known Weight")
         serial.writeNumber(inputKnownWeight);
+        serial.writeLine("")
+        serial.writeLine("Raw Value")
+        serial.writeNumber(rawValue);
         serial.writeLine("")
         serial.writeLine("Value: ")
         serial.writeNumber(value)

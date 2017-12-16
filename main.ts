@@ -11,9 +11,7 @@ enum maxWeight {
     fivehundredgrams,
 }
 
-let lastValue = 0;
 let value = 0;
-
 let usedCalibration = 0;
 let maximumLoadValue = 50000000;
 let outputMax = 5000;
@@ -107,6 +105,11 @@ namespace Load_Cell {
 
     }
 
+    
+    //% block  
+    export function tare(): void {
+        usedCalibration = value;
+    }    
 
 
     //% block    
@@ -156,9 +159,6 @@ namespace Load_Cell {
         let output = 0
         let weight = 0
         let inputRange = 0;
-
-
-
 
         inputRange = outputMax * (inputKnownWeight - usedCalibration) / outputMax;
 
@@ -220,6 +220,7 @@ namespace Load_Cell {
         serial.writeLine("")
 
         return weight;
-
     }
+
+
 }

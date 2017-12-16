@@ -332,7 +332,6 @@ namespace Load_Cell {
             }
         }
 
-        lastValue = value;
         return weight;
 
     }

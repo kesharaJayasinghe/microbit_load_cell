@@ -3,28 +3,17 @@
  */
 
 enum maxWeight {
-    //% block="500g"
-    fivehundredgrams,
 
     //% block="5kg"
-    fivekilograms
+    fivekilograms,
+
+    //% block="500g"
+    fivehundredgrams,
 }
 
 
 //% color=#000000 weight=100 icon="\uf24e" block="Orel - Load Cell"
 namespace Load_Cell {
-
-    //% block
-    export function readTemp(): void {
-        basic.showLeds
-            (`
-    # # # # #
-    # # # # #
-    # # # # #
-    # # # # #
-    # # # # #
-    `)
-    }
 
     //% block    
     export function GetCalibrationValue(): void {
@@ -216,9 +205,25 @@ namespace Load_Cell {
         serial.writeNumber(weight)
         serial.writeLine("")
 
+        if (weight < 0) weight = 0;
 
-        return weight;
 
+        switch (maximumLoad) {
+            case maxWeight.fivehundredgrams: {
+                if (weight > 500) { weight = 500};
+            }
+            case maxWeight.fivekilograms:{
+                if (weight > 500) { weight = 5000};
+        }    
     }
+
+
+    return weight;
+
+}
+
+//% block    
+export function tare(): void {
+
 
 }

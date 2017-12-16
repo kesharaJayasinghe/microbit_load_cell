@@ -11,6 +11,8 @@ enum maxWeight {
     fivehundredgrams,
 }
 
+let lastValue = 0;
+
 
 //% color=#000000 weight=100 icon="\uf24e" block="Orel - Load Cell"
 namespace Load_Cell {
@@ -127,13 +129,13 @@ namespace Load_Cell {
         let j = 0
         let count = 0
         let rawValue = 0
-        let value = 0
         let output = 0
         let weight = 0
         let maximumLoadValue = 0;
         let inputRange = 0;
         let outputMax = 0;
         let inputKnownWeight = 0;
+        let value = 0;
 
 
         switch (maximumLoad) {
@@ -156,9 +158,10 @@ namespace Load_Cell {
             . . # . .
             `)
 
-            calibration = value
-            basic.pause(500)
+            calibration = lastValue;
             
+            basic.pause(500)
+
             basic.showLeds(`
             . . . . . 
             . . . . .
@@ -167,6 +170,8 @@ namespace Load_Cell {
             . . . . .
             `)
         }
+
+            
   
         inputRange = outputMax * (inputKnownWeight - calibration) / outputMax;
 
@@ -236,13 +241,9 @@ namespace Load_Cell {
             }
         }
 
-
+        lastValue = value;
         return weight;
 
-    }
-
-    //% block    
-    export function tare(): void {
     }
 
 

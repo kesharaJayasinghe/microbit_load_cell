@@ -87,7 +87,7 @@ namespace Load_Cell {
         basic.showNumber(avgValue)
     }
 
-    
+
     //% block  
     //% blockId=load_cell block="initialize load cell with %calibration| and maximum load %maximumload"
     export function InitializeLoadCell(calibration: number, maximumLoad: maxWeight): void {
@@ -202,6 +202,12 @@ namespace Load_Cell {
 
         serial.writeLine("Calibration: ")
         serial.writeNumber(usedCalibration)
+        serial.writeLine("")
+        serial.writeLine("Maximum Load Value")
+        serial.writeNumber(maximumLoadValue);
+        serial.writeLine("")
+        serial.writeLine("Input Known Weight")
+        serial.writeNumber(inputKnownWeight);
         serial.writeLine("")
         serial.writeLine("Value: ")
         serial.writeNumber(value)

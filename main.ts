@@ -143,11 +143,25 @@ namespace Load_Cell {
         let weight = 0
         let maximumLoadValue = 0;
 
+        let outputMax = 0;
+        let inputKnownWeight = 0;
+        let inputRange = 0;
+
+
+
         switch (maximumLoad) {
             case maxWeight.fivehundredgrams: maximumLoadValue = 5000000;
-            case maxWeight.fivehundredgrams: maximumLoadValue = 50000000;
+            case maxWeight.fivekilograms: maximumLoadValue = 50000000;
             default: maximumLoadValue = 50000000;
         }
+
+        switch (maximumLoad) {
+            case maxWeight.fivehundredgrams: outputMax = 500, inputKnownWeight = 10700;
+            case maxWeight.fivekilograms: outputMax = 5000, inputKnownWeight = 109166;
+        }
+
+        inputRange = outputMax * (inputKnownWeight - calibration) / outputMax;
+
 
         pins.digitalWritePin(DigitalPin.P0, 0)
         count = 0
@@ -185,7 +199,8 @@ namespace Load_Cell {
         //pins.digitalWritePin(DigitalPin.P0, 0)
 
         value = rawValue / 100
-        output = (value - calibration) * (maximumLoadValue / 10700)
+        //output = (value - calibration) * (maximumLoadValue / 10700)
+        output = (value - calibration) * (maximumLoadValue / inputRange)
         weight = output / 10000
 
         serial.writeLine("Calibration: ")

@@ -223,7 +223,8 @@ namespace Load_Cell {
 }
 
 //% block    
-export function tare(): void {
+    export function tare(): void {
+    }
 
 
 }

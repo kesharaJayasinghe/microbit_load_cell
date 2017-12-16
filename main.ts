@@ -156,7 +156,7 @@ namespace Load_Cell {
             `)
 
             calibration = lastValue;
-            
+
             basic.pause(500)
 
             basic.showLeds(`
@@ -238,7 +238,9 @@ namespace Load_Cell {
 
     }
 
- export function TareAndReadValueInGramsWith(maximumLoad: maxWeight): number {
+    //% block  
+    //% blockId=load_cell block="tare and read value in grams with maximum load %maximumload"    
+    export function TareAndReadValueInGramsWith(maximumLoad: maxWeight): number {
 
         let j = 0
         let count = 0
@@ -333,6 +335,6 @@ namespace Load_Cell {
         lastValue = value;
         return weight;
 
-    }    
+    }
 
 }

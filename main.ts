@@ -131,11 +131,9 @@ namespace Load_Cell {
         let output = 0
         let weight = 0
         let maximumLoadValue = 0;
-
+        let inputRange = 0;
         let outputMax = 0;
         let inputKnownWeight = 0;
-        let inputRange = 0;
-
 
 
         switch (maximumLoad) {
@@ -149,6 +147,27 @@ namespace Load_Cell {
             case maxWeight.fivekilograms: outputMax = 5000, inputKnownWeight = 109166;
         }
 
+        if (input.buttonIsPressed(Button.A)) {
+            basic.showLeds(`
+            # # # # #
+            . . # . .
+            . . # . .
+            . . # . .
+            . . # . .
+            `)
+
+            calibration = value
+            basic.pause(500)
+            
+            basic.showLeds(`
+            . . . . . 
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+        }
+  
         inputRange = outputMax * (inputKnownWeight - calibration) / outputMax;
 
 
@@ -207,22 +226,22 @@ namespace Load_Cell {
 
         if (weight < 0) weight = 0;
 
-        
+
         switch (maximumLoad) {
             case maxWeight.fivehundredgrams: {
-                if (weight > 500) { weight = 500};
+                if (weight > 500) { weight = 500 };
             }
-            case maxWeight.fivekilograms:{
-                if (weight > 5000) { weight = 5000};
-        }    
+            case maxWeight.fivekilograms: {
+                if (weight > 5000) { weight = 5000 };
+            }
+        }
+
+
+        return weight;
+
     }
 
-
-    return weight;
-
-}
-
-//% block    
+    //% block    
     export function tare(): void {
     }
 

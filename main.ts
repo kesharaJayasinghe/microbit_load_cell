@@ -108,7 +108,20 @@ namespace Load_Cell {
 
     //% block  
     export function tare(): void {
+
+        basic.showLeds(`
+    # # # # #
+    . . # . .
+    . . # . .
+    . . # . .
+    . . # . .
+    `)
+
         usedCalibration = value;
+
+        basic.clearScreen()
+        basic.pause(500)
+
     }
 
 

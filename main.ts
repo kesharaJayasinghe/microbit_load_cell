@@ -12,7 +12,7 @@ enum maxWeight {
 }
 
 let lastValue = 0;
-
+let value = 0;
 
 //% color=#000000 weight=100 icon="\uf24e" block="Orel - Load Cell"
 namespace Load_Cell {
@@ -135,7 +135,6 @@ namespace Load_Cell {
         let inputRange = 0;
         let outputMax = 0;
         let inputKnownWeight = 0;
-        let value = 0;
 
 
         switch (maximumLoad) {

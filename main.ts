@@ -156,8 +156,8 @@ namespace Load_Cell {
         let output = 0
         let weight = 0
         let inputRange = 0;
-        let outputMax = 0;
-        let inputKnownWeight = 0;
+
+
 
 
         inputRange = outputMax * (inputKnownWeight - usedCalibration) / outputMax;

@@ -107,7 +107,7 @@ namespace Load_Cell {
 
 
     //% block  
-    export function tare(): void {
+    export function CalibrateToZero(): void {
 
         basic.showLeds(`
     # # # # #

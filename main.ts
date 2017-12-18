@@ -22,7 +22,9 @@ let inputKnownWeight = 109166;
 //% color=#000000 weight=100 icon="\uf24e" block="Orel - Load Cell"
 namespace Load_Cell {
 
-
+    /**
+     * Initialize a 500g Load Cell
+     */    
     //% block  
     export function InitializeW500gLoadCellWith(calibration: number): void {
 
@@ -32,7 +34,10 @@ namespace Load_Cell {
         inputKnownWeight = 92784;
     }
 
-
+    
+    /**
+     * Initialize a 500g Load Cell
+     */    
     //% block  
     export function InitializeW5kgLoadCellWith(calibration: number): void {
 

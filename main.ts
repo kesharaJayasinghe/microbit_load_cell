@@ -109,7 +109,7 @@ namespace Load_Cell {
 
 
     //% block  
-    //% blockId=load_cell block="initialize 500g load cell with calibration %calibration" 
+    //% blockId=load_cell block= "initialize 500g load cell with calibration %calibration"
     export function InitializeW500gLoadCell(calibration: number): void {
 
         usedCalibration = calibration;

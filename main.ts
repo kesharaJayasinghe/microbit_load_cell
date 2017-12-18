@@ -22,6 +22,27 @@ let inputKnownWeight = 109166;
 //% color=#000000 weight=100 icon="\uf24e" block="Orel - Load Cell"
 namespace Load_Cell {
 
+
+    //% block  
+    export function InitializeW500gLoadCellWith(calibration: number): void {
+
+        usedCalibration = calibration;
+        maximumLoadValue = 5000000;
+        outputMax = 500;
+        inputKnownWeight = 92784;
+    }
+
+
+    //% block  
+    export function InitializeW5kgLoadCellWith(calibration: number): void {
+
+        usedCalibration = calibration;
+        maximumLoadValue = 50000000;
+        outputMax = 5000;
+        inputKnownWeight = 109166;
+    }
+
+
     //% block    
     export function GetCalibrationValue(): void {
 
@@ -84,49 +105,6 @@ namespace Load_Cell {
 
         avgValue = totalValue / 10;
         basic.showNumber(avgValue)
-    }
-
-
-    //% block  
-    //% blockId=load_cell block="initialize load cell with calibration %calibration| and maximum load %maximumload"
-    export function InitializeLoadCell(calibration: number, maximumLoad: maxWeight): void {
-
-        usedCalibration = calibration;
-
-        switch (maximumLoad) {
-            case maxWeight.fivehundredgrams: maximumLoadValue = 5000000;
-            case maxWeight.fivekilograms: maximumLoadValue = 50000000;
-            default: maximumLoadValue = 50000000;
-        }
-
-
-        switch (maximumLoad) {
-            case maxWeight.fivehundredgrams: outputMax = 500, inputKnownWeight = 92784;
-            case maxWeight.fivekilograms: outputMax = 5000, inputKnownWeight = 109166;
-        }
-
-    }
-
-
-    //% block  
-    export function InitializeW500gLoadCellWith(calibration: number): void {
-
-        usedCalibration = calibration;
-        maximumLoadValue = 5000000;
-        outputMax = 500;
-        inputKnownWeight = 92784;
-
-    }
-
-
-    //% block  
-    export function InitializeW5kgLoadCellWith(calibration: number): void {
-
-        usedCalibration = calibration;
-        maximumLoadValue = 50000000;
-        outputMax = 5000;
-        inputKnownWeight = 109166;
-
     }
 
 

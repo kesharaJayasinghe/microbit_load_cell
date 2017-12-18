@@ -39,7 +39,7 @@ namespace Load_Cell {
      * Initialize a 500g load cell. Call in the "on start" block
      */
     //% block  
-    export function InitializeW5kgLoadCellWith(calibration: number): void {
+    export function Initialize_5kgLoadCellWith(calibration: number): void {
 
         usedCalibration = calibration;
         maximumLoadValue = 50000000;

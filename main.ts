@@ -23,8 +23,8 @@ let inputKnownWeight = 109166;
 namespace Load_Cell {
 
     /**
-     * Initialize a 500g Load Cell
-     */    
+     * Initialize a 500g load cell. Call in the "on start" block
+     */
     //% block  
     export function InitializeW500gLoadCellWith(calibration: number): void {
 
@@ -34,10 +34,10 @@ namespace Load_Cell {
         inputKnownWeight = 92784;
     }
 
-    
+
     /**
-     * Initialize a 500g Load Cell
-     */    
+     * Initialize a 500g load cell. Call in the "on start" block
+     */
     //% block  
     export function InitializeW5kgLoadCellWith(calibration: number): void {
 
@@ -48,6 +48,9 @@ namespace Load_Cell {
     }
 
 
+    /**
+     * Use this function when no weight is placed on the load cell. Returns the value that can be used for calibration.
+     */
     //% block    
     export function GetCalibrationValue(): void {
 
@@ -112,7 +115,9 @@ namespace Load_Cell {
         basic.showNumber(avgValue)
     }
 
-
+    /**
+     * Sets the current weight value to 0, regardless of the load on the cell. Assign this function to button A or B
+     */
     //% block  
     export function CalibrateToZero(): void {
 
@@ -131,7 +136,9 @@ namespace Load_Cell {
 
     }
 
-
+    /**
+    * Read raw sensor reading with no conversion. Value depends on calibration. Useful for creating your own scale. Call initialization function in "on start" block first
+    */
     //% block    
     export function ReadRawValue(): number {
 
@@ -169,6 +176,9 @@ namespace Load_Cell {
     }
 
 
+    /**
+    * Read sensor value in grams. Value depends on calibration. Call initialization function in "on start" block first
+    */    
     //% block  
     export function ReadValueInGrams(): number {
 

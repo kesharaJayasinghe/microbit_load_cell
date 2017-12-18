@@ -109,7 +109,8 @@ namespace Load_Cell {
 
 
     //% block  
-    export function Initialize500gLoadCell(calibration: number): void {
+    //% blockId=load_cell block="initialize 500g load cell with calibration %calibration" 
+    export function InitializeW500gLoadCell(calibration: number): void {
 
         usedCalibration = calibration;
         maximumLoadValue = 5000000;
@@ -120,8 +121,8 @@ namespace Load_Cell {
 
 
     //% block  
-    //% blockId=load_cell block="initialize 5kg load cell with calibration %calibration
-    export function Initialize5kgLoadCell(calibration: number): void {
+    //% blockId=load_cell block="initialize 5kg load cell with calibration %calibration"
+    export function InitializeW5kgLoadCell(calibration: number): void {
 
         usedCalibration = calibration;
         maximumLoadValue = 50000000;

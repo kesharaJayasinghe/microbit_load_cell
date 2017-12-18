@@ -99,7 +99,7 @@ namespace Load_Cell {
         }
 
         switch (maximumLoad) {
-            case maxWeight.fivehundredgrams: outputMax = 500, inputKnownWeight = 10700;
+            case maxWeight.fivehundredgrams: outputMax = 500, inputKnownWeight = 92784;
             case maxWeight.fivekilograms: outputMax = 5000, inputKnownWeight = 109166;
         }
 
@@ -159,7 +159,6 @@ namespace Load_Cell {
         rawValue = count ^ 0x800000
         pins.digitalWritePin(DigitalPin.P0, 0)
         return rawValue;
-
     }
 
 

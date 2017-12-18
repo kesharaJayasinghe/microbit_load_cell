@@ -92,28 +92,42 @@ namespace Load_Cell {
     export function InitializeLoadCell(calibration: number, maximumLoad: maxWeight): void {
 
         usedCalibration = calibration;
-/*
+
         switch (maximumLoad) {
             case maxWeight.fivehundredgrams: maximumLoadValue = 5000000;
             case maxWeight.fivekilograms: maximumLoadValue = 50000000;
             default: maximumLoadValue = 50000000;
         }
-*/
 
-        let x = 0;        
-        switch (maximumLoad) {
-            case maxWeight.fivehundredgrams: x = 1;
-            case maxWeight.fivekilograms: x = 2;
-            default: x = 1;
-        }
-
-        if (x == 1) maximumLoadValue = 5000000;
-        if (x == 2) maximumLoadValue = 50000000;
 
         switch (maximumLoad) {
             case maxWeight.fivehundredgrams: outputMax = 500, inputKnownWeight = 92784;
             case maxWeight.fivekilograms: outputMax = 5000, inputKnownWeight = 109166;
         }
+
+    }
+
+
+    //% block  
+    //% blockId=load_cell block="initialize 500g load cell with calibration %calibration
+    export function Initialize500gLoadCell(calibration: number): void {
+
+        usedCalibration = calibration;
+        maximumLoadValue = 5000000;
+        outputMax = 500;
+        inputKnownWeight = 92784;
+
+    }
+
+
+    //% block  
+    //% blockId=load_cell block="initialize 5kg load cell with calibration %calibration
+    export function Initialize5kgLoadCell(calibration: number): void {
+
+        usedCalibration = calibration;
+        maximumLoadValue = 50000000;
+        outputMax = 5000;
+        inputKnownWeight = 109166;
 
     }
 

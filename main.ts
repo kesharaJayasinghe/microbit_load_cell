@@ -11,6 +11,7 @@ enum maxWeight {
     fivehundredgrams,
 }
 
+
 let value = 0;
 let usedCalibration = 0;
 let maximumLoadValue = 50000000;
@@ -87,16 +88,27 @@ namespace Load_Cell {
 
 
     //% block  
-    //% blockId=load_cell block="initialize load cell with %calibration| and maximum load %maximumload"
+    //% blockId=load_cell block="initialize load cell with calibration %calibration| and maximum load %maximumload"
     export function InitializeLoadCell(calibration: number, maximumLoad: maxWeight): void {
 
         usedCalibration = calibration;
-
+/*
         switch (maximumLoad) {
             case maxWeight.fivehundredgrams: maximumLoadValue = 5000000;
             case maxWeight.fivekilograms: maximumLoadValue = 50000000;
             default: maximumLoadValue = 50000000;
         }
+*/
+
+        let x = 0;        
+        switch (maximumLoad) {
+            case maxWeight.fivehundredgrams: x = 1;
+            case maxWeight.fivekilograms: x = 2;
+            default: x = 1;
+        }
+
+        if (x == 1) maximumLoadValue = 5000000;
+        if (x == 2) maximumLoadValue = 50000000;
 
         switch (maximumLoad) {
             case maxWeight.fivehundredgrams: outputMax = 500, inputKnownWeight = 92784;

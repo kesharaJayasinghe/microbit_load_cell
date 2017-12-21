@@ -16,7 +16,7 @@ let value = 0;
 let usedCalibration = 0;
 let maximumLoadValue = 50000000;
 let outputMax = 5000;
-let inputKnownWeight = 109166;
+let inputKnownWeight = 109032;
 
 
 //% color=#000000 weight=100 icon="\uf24e" block="Orel - Load Cell"

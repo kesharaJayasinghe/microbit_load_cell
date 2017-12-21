@@ -44,7 +44,7 @@ namespace Load_Cell {
         usedCalibration = calibration;
         maximumLoadValue = 50000000;
         outputMax = 5000;
-        inputKnownWeight = 109166;
+        inputKnownWeight = 109032;
     }
 
 
